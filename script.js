@@ -548,8 +548,8 @@ document.querySelector('.cake-emoji').addEventListener('click', () => {
   // Bind to document & window
   const events = ['click', 'touchstart', 'touchend', 'keydown'];
   events.forEach(evt => {
-    document.addEventListener(evt, startMusicOnGesture, { passive: true });
-    window.addEventListener(evt, startMusicOnGesture, { passive: true });
+    document.addEventListener(evt, startMusicOnGesture);
+    window.addEventListener(evt, startMusicOnGesture);
   });
 
   // Explicitly bind to key clickable elements (fixes iOS Safari body-click bug)
@@ -560,6 +560,6 @@ document.querySelector('.cake-emoji').addEventListener('click', () => {
     document.body
   ];
   elements.forEach(el => {
-    if (el) el.addEventListener('click', startMusicOnGesture, { passive: true });
+    if (el) el.addEventListener('click', startMusicOnGesture);
   });
 })();
