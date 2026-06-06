@@ -16,8 +16,8 @@ import pytz
 ist = pytz.timezone('Asia/Kolkata')
 current_date_ist = datetime.now(ist).strftime("%m-%d")
 
-if current_date_ist != "06-07":
-    print(f"Date check failed. Current IST date is {current_date_ist}, waiting for 06-07. Skipping.")
+if current_date_ist not in ["06-06", "06-07"]:
+    print(f"Date check failed. Current IST date is {current_date_ist}, waiting for 06-06 or 06-07. Skipping.")
     exit(0)
 
 # Get Twilio credentials from environment variables
