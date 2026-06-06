@@ -1,0 +1,30 @@
+name: Birthday Midnight Wish 🎂
+
+on:
+  schedule:
+    # 12:00 AM IST on June 7th is 6:30 PM UTC on June 6th.
+    # cron format: "minute hour day month day-of-week"
+    - cron: "30 18 6 6 *"
+
+jobs:
+  send-sms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install twilio pytz
+
+      - name: Send Birthday SMS
+        env:
+          TWILIO_SID: ${{ secrets.TWILIO_SID }}
+          TWILIO_TOKEN: ${{ secrets.TWILIO_TOKEN }}
+          TWILIO_NUMBER: ${{ secrets.TWILIO_NUMBER }}
+          MOM_NUMBER: ${{ secrets.MOM_NUMBER }}
+        run: python send_wish.py

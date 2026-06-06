@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Amma! 🎂</title>
+  <meta name="description" content="A special birthday surprise made with love for the most wonderful mom in the world. Happy Birthday Amma!" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ✦ CANVAS FOR CONFETTI ✦ -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ✦ FLOATING BALLOONS ✦ -->
+  <div id="balloons-container" aria-hidden="true">
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎀</div>
+    <div class="balloon b3">🎈</div>
+    <div class="balloon b4">💜</div>
+    <div class="balloon b5">🎈</div>
+    <div class="balloon b6">🌸</div>
+    <div class="balloon b7">🎈</div>
+    <div class="balloon b8">💕</div>
+  </div>
+
+  <!-- ✦ HERO SECTION ✦ -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-deco top-left">🌸</div>
+    <div class="hero-deco top-right">✨</div>
+    <div class="hero-deco bottom-left">🎀</div>
+    <div class="hero-deco bottom-right">💝</div>
+
+    <div class="hero-content">
+      <div class="cake-emoji">🎂</div>
+      <h1 class="hero-title">
+        <span class="word w1">Happy</span>
+        <span class="word w2">Birthday</span>
+        <span class="word w3 highlight">Amma!</span>
+      </h1>
+      <p class="hero-subtitle">The most wonderful mom in the whole universe 💖</p>
+      <div class="hero-stars">
+        <span>⭐</span><span>🌟</span><span>✨</span><span>💫</span><span>⭐</span>
+      </div>
+      <a href="#letter" class="scroll-btn" id="hero-scroll-btn">
+        <span>Send her love ↓</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ✦ LETTER SECTION ✦ -->
+  <section id="letter" class="section letter-section">
+    <div class="section-label">💌 உன் பையனிடமிருந்து</div>
+    <h2 class="section-title">இதயத்திலிருந்து... ❤️</h2>
+
+    <div class="letter-card" id="letter-card">
+      <div class="letter-ribbon">🎀</div>
+      <div class="letter-inner">
+        <p class="letter-greeting">❤️ Happy Birthday Amma ❤️</p>
+
+        <p class="letter-body kavithai-line">42 years ஆகிடுச்சு...</p>
+        <p class="letter-body kavithai-line">ஆனா எனக்கு தெரிஞ்ச அம்மா,</p>
+        <p class="letter-body kavithai-line">இன்னும் அதே பாசம்...</p>
+        <p class="letter-body kavithai-line">அதே அன்பு...</p>
+        <p class="letter-body kavithai-line">அதே அழகான சிரிப்பு... ❤️</p>
+
+        <div class="kavithai-divider">✦ ✦ ✦</div>
+
+        <p class="letter-body kavithai-line">எங்களுக்காக உன் ஆசைகளை மறந்து,</p>
+        <p class="letter-body kavithai-line">எங்கள் கனவுகளுக்காக வாழ்ந்த</p>
+        <p class="letter-body kavithai-line bold-line">எங்கள் முதல் Heroin நீ தான் அம்மா...</p>
+
+        <div class="kavithai-divider">✦ ✦ ✦</div>
+
+        <p class="letter-body kavithai-line">நான் எவ்வளவு பெரியவனா ஆனாலும்,</p>
+        <p class="letter-body kavithai-line">உன் கண்ணுக்கு நான் இன்னும்</p>
+        <p class="letter-body kavithai-line bold-line">அந்த சின்ன பையன் தான்... 🤍</p>
+
+        <div class="kavithai-divider">✦ ✦ ✦</div>
+
+        <p class="letter-body kavithai-line">இந்த Birthday-ல</p>
+        <p class="letter-body kavithai-line">நான் கேட்குற ஒரே Wish...</p>
+        <p class="letter-body kavithai-line">நீயும் அப்பாவும்</p>
+        <p class="letter-body kavithai-line">கை கோர்த்துக்கிட்டு,</p>
+        <p class="letter-body kavithai-line bold-line">Happy-ஆ, Health-ஆ,</p>
+        <p class="letter-body kavithai-line bold-line">நீண்ட நாட்கள் சிரிச்சுக்கிட்டே வாழணும்... ❤️✨</p>
+
+        <div class="kavithai-divider">✦ ✦ ✦</div>
+
+        <p class="letter-body kavithai-line">நான் எவ்வளவு நாள் வாழ்வேன்னு தெரியாது அம்மா...</p>
+        <p class="letter-body kavithai-line">ஆனா நான் வாழ்ற ஒவ்வொரு நாளும்,</p>
+        <p class="letter-body kavithai-line">உனக்கும் அப்பாவுக்கும் தலை நிமிர்ந்து நிற்குற மாதிரி,</p>
+        <p class="letter-body kavithai-line bold-line">பெருமை சேர்க்க தான் try பண்ணுவேன்... ❤️</p>
+
+        <p class="letter-closing">Love You Amma ❤️<br /><strong>— Un Paiyan 🤍</strong></p>
+      </div>
+      <div class="letter-hearts">
+        <span class="floating-heart fh1">💗</span>
+        <span class="floating-heart fh2">💕</span>
+        <span class="floating-heart fh3">💝</span>
+        <span class="floating-heart fh4">💖</span>
+        <span class="floating-heart fh5">💗</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ PARENTS SECTION ✦ -->
+  <section id="parents" class="section parents-section">
+    <div class="section-label">❤️ Perfect Pair</div>
+    <h2 class="section-title">அம்மா &amp; அப்பா 💑</h2>
+
+    <div class="parents-card" id="parents-card">
+
+      <!-- Photo side -->
+      <div class="parents-photo-wrap">
+        <div class="parents-photo-frame">
+          <img src="images/IMG-20251102-WA0084.jpg" alt="Amma and Appa together" />
+          <div class="parents-photo-badge">💑 Perfect Pair</div>
+        </div>
+        <!-- Decorative floating elements -->
+        <span class="p-deco pd1">❤️</span>
+        <span class="p-deco pd2">✨</span>
+        <span class="p-deco pd3">💕</span>
+        <span class="p-deco pd4">🌸</span>
+        <span class="p-deco pd5">💖</span>
+      </div>
+
+      <!-- Kavithai side -->
+      <div class="parents-text-wrap">
+        <p class="parents-quote-mark">"</p>
+
+        <p class="parents-line">உண்மையா சொல்லணும்னா அம்மா,</p>
+        <p class="parents-line bold">உனக்கு அப்பா மாதிரி ஒரு வாழ்க்கைத்துணை கிடைச்சது</p>
+        <p class="parents-line bold pink">பெரிய வரம்... ❤️</p>
+
+        <div class="parents-divider">
+          <span class="divider-line"></span>
+          <span class="divider-heart">💗</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="parents-line">அதே மாதிரி அப்பாவுக்கும்</p>
+        <p class="parents-line">உன்னை மாதிரி ஒரு மனைவி கிடைச்சது</p>
+        <p class="parents-line bold pink">அதைவிட பெரிய வரம்... ❤️</p>
+
+        <div class="parents-divider">
+          <span class="divider-line"></span>
+          <span class="divider-heart">💗</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="parents-line bold">நீங்க ரெண்டு பேரும் ஒருத்தருக்கொருத்தர்</p>
+        <p class="parents-highlight">✨ Perfect Pair ✨</p>
+
+        <div class="parents-divider">
+          <span class="divider-line"></span>
+          <span class="divider-heart">💗</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="parents-line">எவ்வளவு கஷ்டம் வந்தாலும் கை விடாம,</p>
+        <p class="parents-line">ஒண்ணா நின்னு இந்த குடும்பத்தை</p>
+        <p class="parents-line bold">இவ்வளவு தூரம் கொண்டு வந்திருக்கீங்க...</p>
+
+        <div class="parents-divider">
+          <span class="divider-line"></span>
+          <span class="divider-heart">💗</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="parents-line">அதுக்காக நானும் பாப்பாவும்</p>
+        <p class="parents-line bold pink">எப்பவும் பெருமைப்படுறோம்... ❤️</p>
+
+        <p class="parents-sign">— உங்கள் பையன் &amp; பாப்பா 🤍</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✦ PHOTO GALLERY SECTION ✦ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-label">📸 நம் நினைவுகள்</div>
+    <h2 class="section-title">Our Beautiful Moments 💕</h2>
+    <p class="section-desc">கண்ணில் நீர் வரும் வரை பார்க்கலாம்... இவை நம் தங்க நினைவுகள் ✨</p>
+
+    <div class="polaroid-grid" id="polaroid-grid">
+      <!-- Generated dynamically in script.js -->
+    </div>
+  </section>
+
+  <!-- ✦ BIRTHDAY COUNTDOWN / AGE REVEAL ✦ -->
+  <section id="countdown" class="section countdown-section">
+    <div class="section-label">🎊 Birthday celebration</div>
+    <h2 class="section-title">The Big Reveal! 🎂</h2>
+
+    <!-- Flip Card Age Reveal -->
+    <div class="age-reveal-wrapper">
+      <p class="reveal-subtitle">அம்மாவின் birthday surprise பாக்கணுமா? Tap செய்யுங்க! 🎁</p>
+      <div class="flip-card" id="flip-card" onclick="revealAge()" tabindex="0" role="button" aria-label="Click to reveal age">
+        <div class="flip-card-inner" id="flip-card-inner">
+          <div class="flip-front">
+            <div class="flip-front-emoji">🎁</div>
+            <p class="flip-front-text">Tap to<br />Reveal!</p>
+            <div class="flip-sparkles">✨✨✨</div>
+          </div>
+          <div class="flip-back">
+            <p class="flip-back-label">இன்று உன் வயது</p>
+            <div class="age-number" id="age-number">42</div>
+            <p class="flip-back-tagline">இன்னும் அழகாக<br />மலர்கிறாய்! 💖</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Age Stats Cards -->
+      <div class="age-stats" id="age-stats">
+        <div class="stat-card" style="--sc: #FFB3C6;">
+          <span class="stat-num" id="stat-years">—</span>
+          <span class="stat-label">Years 🌸</span>
+        </div>
+        <div class="stat-card" style="--sc: #C9B8FF;">
+          <span class="stat-num" id="stat-months">—</span>
+          <span class="stat-label">Months 💜</span>
+        </div>
+        <div class="stat-card" style="--sc: #A8E6CF;">
+          <span class="stat-num" id="stat-weeks">—</span>
+          <span class="stat-label">Weeks 🌿</span>
+        </div>
+        <div class="stat-card" style="--sc: #FFCC99;">
+          <span class="stat-num" id="stat-days">—</span>
+          <span class="stat-label">Days 🌟</span>
+        </div>
+        <div class="stat-card" style="--sc: #FFB3C6;">
+          <span class="stat-num" id="stat-hours">—</span>
+          <span class="stat-label">Hours ⏰</span>
+        </div>
+        <div class="stat-card" style="--sc: #C9B8FF;">
+          <span class="stat-num" id="stat-seconds">—</span>
+          <span class="stat-label">Seconds 💫</span>
+        </div>
+      </div>
+      <p class="age-stats-note">ஒவ்வொரு நொடியும் உன்னோட அன்பை உணர்கிறோம் ❤️</p>
+    </div>
+
+    <!-- Countdown to Midnight -->
+    <div class="midnight-countdown" id="midnight-countdown">
+      <p class="countdown-label">⏰ Time until midnight of your special day</p>
+      <div class="countdown-timer">
+        <div class="time-block">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-unit">hours</span>
+        </div>
+        <span class="time-sep">:</span>
+        <div class="time-block">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-unit">mins</span>
+        </div>
+        <span class="time-sep">:</span>
+        <div class="time-block">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-unit">secs</span>
+        </div>
+      </div>
+      <div class="birthday-message" id="birthday-message" style="display:none;">
+        <span class="bday-emoji">🥳</span>
+        <p>IT'S YOUR BIRTHDAY! Happy Birthday Amma! 🎉🎂💕</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ CLOSING KAVITHAI SECTION ✦ -->
+  <section id="closing" class="section closing-section">
+    <div class="closing-card reveal-on-scroll" id="closing-card">
+      <div class="closing-icon">❤️</div>
+      <div class="closing-lines">
+        <p class="closing-line">நான் எவ்வளவு நாள் வாழ்வேன்னு தெரியாது அம்மா...</p>
+        <p class="closing-line">ஆனா நான் வாழ்ற ஒவ்வொரு நாளும்,</p>
+        <p class="closing-line">உனக்கும் அப்பாவுக்கும்</p>
+        <p class="closing-line">தலை நிமிர்ந்து நிற்குற மாதிரி,</p>
+        <p class="closing-line highlight">பெருமை சேர்க்க தான் try பண்ணுவேன்... ❤️</p>
+      </div>
+      <p class="closing-sign">— Un Paiyan 🤍</p>
+    </div>
+  </section>
+
+  <!-- ✦ FOOTER ✦ -->
+  <footer class="footer-section" id="footer">
+    <div class="footer-content">
+      <p class="footer-main">Happy Birthday, Amma! 🎂</p>
+      <p class="footer-wish">May this year bring you all the happiness, health, and love you deserve.</p>
+      <p class="footer-credit">Made with <span class="heart-beat">❤️</span> by Nithin</p>
+    </div>
+  </footer>
+
+  <!-- ✦ AUDIO ELEMENT ✦ -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="audio/bgm_amma.mp3" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
