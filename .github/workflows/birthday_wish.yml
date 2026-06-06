@@ -5,6 +5,7 @@ on:
     # 9:40 PM IST on June 6th is 4:10 PM UTC (16:10) on June 6th.
     # cron format: "minute hour day month day-of-week"
     - cron: "10 16 6 6 *"
+  workflow_dispatch:
 
 jobs:
   send-sms:
