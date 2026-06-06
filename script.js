@@ -514,8 +514,6 @@ document.querySelector('.cake-emoji').addEventListener('click', () => {
   let isPlaying = false;
 
   function playAudio() {
-    // Explicitly call load() first to prepare the audio element for mobile browsers
-    audio.load();
     audio.play().then(() => {
       isPlaying = true;
     }).catch(err => {
