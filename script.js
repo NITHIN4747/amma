@@ -514,25 +514,54 @@ document.querySelector('.cake-emoji').addEventListener('click', () => {
   let isPlaying = false;
 
   function playAudio() {
+    // Explicitly call load() first to prepare the audio element for mobile browsers
+    audio.load();
     audio.play().then(() => {
       isPlaying = true;
     }).catch(err => {
-      console.log("Audio autoplay waiting for user gesture.");
+      console.log("Audio autoplay blocked by mobile gesture policy:", err);
     });
   }
 
-  // Start music on first user click, tap, or keydown
+  // Start music on first user activation
   const startMusicOnGesture = () => {
     if (!isPlaying) {
       playAudio();
     }
-    // Clean up event listeners after the first attempt
-    document.removeEventListener('click', startMusicOnGesture);
-    document.removeEventListener('touchstart', startMusicOnGesture);
-    document.removeEventListener('keydown', startMusicOnGesture);
+    // Clean up all event listeners
+    const events = ['click', 'touchstart', 'touchend', 'keydown'];
+    events.forEach(evt => {
+      document.removeEventListener(evt, startMusicOnGesture);
+      window.removeEventListener(evt, startMusicOnGesture);
+    });
+    
+    // Clean up elements
+    const elements = [
+      document.getElementById('hero-scroll-btn'),
+      document.querySelector('.cake-emoji'),
+      document.getElementById('flip-card'),
+      document.body
+    ];
+    elements.forEach(el => {
+      if (el) el.removeEventListener('click', startMusicOnGesture);
+    });
   };
 
-  document.addEventListener('click', startMusicOnGesture);
-  document.addEventListener('touchstart', startMusicOnGesture);
-  document.addEventListener('keydown', startMusicOnGesture);
+  // Bind to document & window
+  const events = ['click', 'touchstart', 'touchend', 'keydown'];
+  events.forEach(evt => {
+    document.addEventListener(evt, startMusicOnGesture, { passive: true });
+    window.addEventListener(evt, startMusicOnGesture, { passive: true });
+  });
+
+  // Explicitly bind to key clickable elements (fixes iOS Safari body-click bug)
+  const elements = [
+    document.getElementById('hero-scroll-btn'),
+    document.querySelector('.cake-emoji'),
+    document.getElementById('flip-card'),
+    document.body
+  ];
+  elements.forEach(el => {
+    if (el) el.addEventListener('click', startMusicOnGesture, { passive: true });
+  });
 })();
