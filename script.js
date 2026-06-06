@@ -508,58 +508,25 @@ document.querySelector('.cake-emoji').addEventListener('click', () => {
 // ── MUSIC CONTROL SYSTEM ────────────────────
 (function initMusicControl() {
   const audio = document.getElementById('bg-audio');
-  if (!audio) return;
+  const gate  = document.getElementById('music-gate');
+  if (!audio || !gate) return;
 
   audio.volume = 0.40;
-  let isPlaying = false;
 
-  function playAudio() {
-    audio.play().then(() => {
-      isPlaying = true;
-    }).catch(err => {
-      console.log("Audio autoplay blocked by mobile gesture policy:", err);
-    });
-  }
+  gate.addEventListener('click', () => {
+    // Play immediately on explicit user action
+    audio.play().catch(err => console.log('Audio playback error:', err));
 
-  // Start music on first user activation
-  const startMusicOnGesture = () => {
-    if (!isPlaying) {
-      playAudio();
+    // Smooth transition fade out
+    gate.style.transition = 'opacity 0.6s ease';
+    gate.style.opacity = '0';
+    setTimeout(() => gate.remove(), 600);
+
+    // Trigger initial burst of confetti
+    if (window.triggerConfetti) {
+      setTimeout(() => {
+        window.triggerConfetti();
+      }, 300);
     }
-    // Clean up all event listeners
-    const events = ['click', 'touchstart', 'touchend', 'keydown'];
-    events.forEach(evt => {
-      document.removeEventListener(evt, startMusicOnGesture);
-      window.removeEventListener(evt, startMusicOnGesture);
-    });
-    
-    // Clean up elements
-    const elements = [
-      document.getElementById('hero-scroll-btn'),
-      document.querySelector('.cake-emoji'),
-      document.getElementById('flip-card'),
-      document.body
-    ];
-    elements.forEach(el => {
-      if (el) el.removeEventListener('click', startMusicOnGesture);
-    });
-  };
-
-  // Bind to document & window
-  const events = ['click', 'touchstart', 'touchend', 'keydown'];
-  events.forEach(evt => {
-    document.addEventListener(evt, startMusicOnGesture);
-    window.addEventListener(evt, startMusicOnGesture);
-  });
-
-  // Explicitly bind to key clickable elements (fixes iOS Safari body-click bug)
-  const elements = [
-    document.getElementById('hero-scroll-btn'),
-    document.querySelector('.cake-emoji'),
-    document.getElementById('flip-card'),
-    document.body
-  ];
-  elements.forEach(el => {
-    if (el) el.addEventListener('click', startMusicOnGesture);
   });
 })();
